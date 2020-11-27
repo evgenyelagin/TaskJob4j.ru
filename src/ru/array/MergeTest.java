@@ -1,4 +1,4 @@
-package test.array;
+package ru.array;
 
 import org.junit.Test;
 import ru.array.Merge;
@@ -63,6 +63,15 @@ public class MergeTest {
         int[] result = Merge.merge(
                 new int[] {},
                 new int[] {1, 2, 3, 4}
+        );
+        assertThat(result, is(expect));
+    }
+    @Test
+    public void whenRightGreat() {
+        int[] expect = {7, 10, 15, 1, 11, 12, 18};
+        int[] result = Merge.merge(
+                new int[] {7, 10, 15},
+                new int[] {1, 11, 12, 18}
         );
         assertThat(result, is(expect));
     }
