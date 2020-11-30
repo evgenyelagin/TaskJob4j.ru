@@ -8,15 +8,17 @@ public class Merge {
         for (int irsl = 0; irsl < rsl.length; ++irsl) {
             if (ileft < left.length) {
                 if (iright < right.length) {
-                    if (left[ileft] < right[iright])
+                    if (left[ileft] < right[iright]) {
                         rsl[irsl] = left[ileft++];
-                    else
+                    } else {
                         rsl[irsl] = right[iright++];
+                    }
                 } else {
                     rsl[irsl] = left[ileft++];
                 }
-            } else
+            } else {
                 rsl[irsl] = right[iright++];
+            }
         }
         return rsl;
     }

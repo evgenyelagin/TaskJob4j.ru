@@ -19,7 +19,7 @@ public class MergeTest {
 
     @Test
     public void whenReorder() {
-        int[] expect = {1, 3, 2, 4};
+        int[] expect = {1, 2, 3, 4};
         int[] result = Merge.merge(
                 new int[] {1, 3},
                 new int[] {2, 4}
@@ -68,7 +68,7 @@ public class MergeTest {
     }
     @Test
     public void whenRightGreat() {
-        int[] expect = {7, 10, 15, 1, 11, 12, 18};
+        int[] expect = {1, 7, 10, 11, 12, 15, 18};
         int[] result = Merge.merge(
                 new int[] {7, 10, 15},
                 new int[] {1, 11, 12, 18}
